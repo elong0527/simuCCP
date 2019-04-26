@@ -4,8 +4,8 @@
 \alias{simuCCP}
 \title{Simulate Concordance Probability based on bivariate copula with known family and therotical value}
 \usage{
-simuCCP(N, metric = "Cind", value = 0.7, family = c(1, 3, 4), c0 = 0.5,
-  fam2 = NULL, par2 = NULL)
+simuCCP(N, metric = "Cind", value = 0.7, family = c(1, 3, 4),
+  c0 = 0.5, fam2 = NULL, par2 = NULL)
 }
 \arguments{
 \item{N}{sample size}
