@@ -13,3 +13,7 @@ Depends: CDVine, numDeriv, rootSolve, pracma
 RoxygenNote: 6.0.1
 NeedsCompilation: no
 Packaged: 2017-10-02 02:56:04 UTC; zhanyilo
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
