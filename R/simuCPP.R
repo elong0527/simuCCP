@@ -53,7 +53,7 @@ simuCCP <- function(N, metric = "Cind", value = 0.7, family = c(1,3,4), c0 = 0.5
   }
   U1 = CDVineSim(N, fam1, par1, type = 1) # C-Vine
 
-  if(metric == "AUC") U1[,1] <- U1[,1] > c0
+  # if(metric == "AUC") U1[,1] <- U1[,1] > c0
   list( data = U1, family = fam1, parameter = par1)
 }
 
