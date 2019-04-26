@@ -1,4 +1,4 @@
-StudyDesign
+Simulating Time to Event Data with Pre-defined Predictive Metrics
 =========
 
 An R package for simulating concordance probability, AUC and time-dependent AUC by using copula. 
@@ -12,5 +12,5 @@ From an interactive R session:
 ```r
 library(devtools)
 install_github("elong0527/simuCPP")
-library(StudyDesign)
+library(simuCPP)
 ```
