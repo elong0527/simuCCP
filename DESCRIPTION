@@ -3,21 +3,19 @@ Type: Package
 Title: Simulate concordance probability, AUC and time-dependent AUC
         based on copula
 Version: 0.1
-Date: 2015-08-31
 Author: Yilong Zhang
 Maintainer: elong0527<elong0527@gmail.com>
 Description: Simulate concordance probability, AUC and time-dependent AUC based on copula. 
 License: GPL-3
 LazyData: TRUE
 Depends: CDVine, 
-         numDeriv, 
-         rootSolve, 
          pracma
 RoxygenNote: 6.1.1
 NeedsCompilation: no
-Packaged: 2017-10-02 02:56:04 UTC; zhanyilo
 Suggests: 
     knitr,
     rmarkdown,
-    ROCR
+    ROCR,
+    testthat
 VignetteBuilder: knitr
+Encoding: UTF-8

@@ -6,9 +6,8 @@
 #' @param family copula family. check \code{BiCopPar2Tau} for detail.
 #' @param par Copula parameter.
 #' @param par2 Second parameter for the two parameter BB1, BB6, BB7 and BB8 copulas (default: \code{par2 = 0}).
-#' @param c0 prevalence; cutoff point of latent uniform parameter
 #' @examples
-#' BiCopPar2AUC(3, 1, c0 = 0.5)
+#' # BiCopPar2AUC(3, 1, c0 = 0.5)
 BiCopPar2Cind <- function(family, par, par2 = 0){
   tau <- BiCopPar2Tau(family, par, par2)
   Cind <- (tau + 1)/2
@@ -21,10 +20,9 @@ BiCopPar2Cind <- function(family, par, par2 = 0){
 #'
 #' @export
 #' @param family copula family. check \code{BiCopPar2Tau} for detail.
-#' @param C-index value (numeric in [0.5, 1])
-#' @param c0 prevalence; cutoff point of latent uniform parameter
+#' @param Cind value (numeric in [0.5, 1])
 #' @examples
-#' BiCopCstat2Par(3, 0.8)
+#' # BiCopCstat2Par(3, 0.8)
 BiCopCind2Par <- function(family, Cind){
   tau <- 2 * Cind - 1
   BiCopTau2Par(family, tau)

@@ -12,12 +12,10 @@ BiCopPar2Cind(family, par, par2 = 0)
 \item{par}{Copula parameter.}
 
 \item{par2}{Second parameter for the two parameter BB1, BB6, BB7 and BB8 copulas (default: \code{par2 = 0}).}
-
-\item{c0}{prevalence; cutoff point of latent uniform parameter}
 }
 \description{
 This function computes the theoretical C-index value of a bivariate copula for given parameter values.
 }
 \examples{
-BiCopPar2AUC(3, 1, c0 = 0.5)
+# BiCopPar2AUC(3, 1, c0 = 0.5)
 }

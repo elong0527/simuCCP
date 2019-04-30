@@ -9,13 +9,11 @@ BiCopCind2Par(family, Cind)
 \arguments{
 \item{family}{copula family. check \code{BiCopPar2Tau} for detail.}
 
-\item{C-index}{value (numeric in [0.5, 1])}
-
-\item{c0}{prevalence; cutoff point of latent uniform parameter}
+\item{Cind}{value (numeric in [0.5, 1])}
 }
 \description{
 This function computes the parameter of a one parameter bivariate copula for a given value of C-index.
 }
 \examples{
-BiCopCstat2Par(3, 0.8)
+# BiCopCstat2Par(3, 0.8)
 }

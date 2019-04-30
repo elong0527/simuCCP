@@ -24,11 +24,13 @@ BiCopPar2iAUC(family, par, par2 = 0, show_AUC = T, c0_length = 50,
 \item{q_density}{marginal quantile function of Time distribution}
 
 \item{d_density}{marginal PDF of Time distribution}
+
+\item{type}{type is cumulative or incidence}
 }
 \description{
 This function computes the theoretical AUC value of a bivariate copula for given parameter values.
 }
 \examples{
-BiCopPar2iAUC( family = 3, par = 1)
+#BiCopPar2iAUC( family = 3, par = 1)
 ## Note: the results are not stable
 }

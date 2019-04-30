@@ -21,5 +21,5 @@ BiCopPar2AUC(family, par, par2 = 0, c0, type = "cumulative")
 This function computes the theoretical AUC value of a bivariate copula for given parameter values.
 }
 \examples{
-BiCopPar2AUC(3, 1, c0 = 0.5)
+# BiCopPar2AUC(3, 1, c0 = 0.5)
 }

@@ -1,3 +1,11 @@
+#' simuCCP package documentation
+#' @import CDVine
+#' @import rootSolve
+#'
+#' @docType package
+#' @name simuCCP
+NULL
+
 #' Simulate Concordance Probability based on bivariate copula with known family and therotical value
 #'
 #' This function generate multivariate uniform distribution with designed copula family and
@@ -14,22 +22,22 @@
 #' @param par2 parameters of higher order copula family ( dimension: (d^2 - 3d + 2)/2 ) (default: all 0)
 #' @examples
 #' # C-index
-#' U1 = simuCCP(300, metric = "Cind", value = 0.7, family = c(1,3))$data
-#' ( cor(U1, method = "kendall") + 1 ) / 2
+#' #U1 = simuCCP(300, metric = "Cind", value = 0.7, family = c(1,3))$data
+#' #( cor(U1, method = "kendall") + 1 ) / 2
 #'
 #' # C-index with a dependent copula
-#' U1 = simuCCP(300, metric = "Cind", value = 0.7, family = c(1,3), fam2 = 3, par2 = 1)$data
-#' ( cor(U1, method = "kendall") + 1 ) / 2
+#' #U1 = simuCCP(300, metric = "Cind", value = 0.7, family = c(1,3), fam2 = 3, par2 = 1)$data
+#' #( cor(U1, method = "kendall") + 1 ) / 2
 #'
 #' # AUC
-#' U1 = simuCCP(300, metric = "AUC", value = 0.7, family = c(1,3))$data
-#' library(pROC)
-#' apply(U1[,-1], 2, function(x) auc(U1[,1], x) )
+#' #U1 = simuCCP(300, metric = "AUC", value = 0.7, family = c(1,3))$data
+#' #library(pROC)
+#' #apply(U1[,-1], 2, function(x) auc(U1[,1], x) )
 #'
 #' # AUC with a dependent copula
-#' U1 = simuCCP(300, metric = "AUC", value = 0.7, family = c(1,3), fam2 = 3, par2 = 1)$data
-#' library(pROC)
-#' apply(U1[,-1], 2, function(x) auc(U1[,1], x) )
+#' #U1 = simuCCP(300, metric = "AUC", value = 0.7, family = c(1,3), fam2 = 3, par2 = 1)$data
+#' #library(pROC)
+#' #apply(U1[,-1], 2, function(x) auc(U1[,1], x) )
 simuCCP <- function(N, metric = "Cind", value = 0.7, family = c(1,3,4), c0 = 0.5, fam2 = NULL, par2 = NULL){
   if(! metric %in% c("Cind","iAUC","AUC"))
     stop("We only support C-index, iAUC and AUC")

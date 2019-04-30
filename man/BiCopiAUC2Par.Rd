@@ -17,5 +17,5 @@ BiCopiAUC2Par(family, iAUC)
 This function computes the parameter of a one parameter bivariate copula for a given value of AUC.
 }
 \examples{
-BiCopiAUC2Par(3, 0.75)
+# BiCopiAUC2Par(3, 0.75)
 }

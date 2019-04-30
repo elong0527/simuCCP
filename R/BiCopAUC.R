@@ -9,7 +9,7 @@
 #' @param c0 prevalence; cutoff point of latent uniform parameter
 #' @param type type is cumulative or incidence
 #' @examples
-#' BiCopPar2AUC(3, 1, c0 = 0.5)
+#' # BiCopPar2AUC(3, 1, c0 = 0.5)
 BiCopPar2AUC <- function(family, par, par2 = 0, c0, type = "cumulative"){
 
   if(! type %in% c("cumulative", "incidence"))
@@ -54,7 +54,7 @@ BiCopPar2AUC <- function(family, par, par2 = 0, c0, type = "cumulative"){
 #' @param AUC the AUC value
 #' @param c0 prevalence; cutoff point of latent uniform parameter
 #' @examples
-#' BiCopAUC2Par(3, 0.7274113, c0 = 0.5, lower = 1e-5, upper = 5)
+#' # BiCopAUC2Par(3, 0.7274113, c0 = 0.5, lower = 1e-5, upper = 5)
 BiCopAUC2Par <- function(family, AUC, c0){
   foo <- function(par){
     BiCopPar2AUC(family = family, par = par, par2 = 0, c0 = c0) - AUC
