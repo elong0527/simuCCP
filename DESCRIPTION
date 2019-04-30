@@ -9,7 +9,8 @@ Description: Simulate concordance probability, AUC and time-dependent AUC based 
 License: GPL-3
 LazyData: TRUE
 Depends: CDVine, 
-         pracma
+         pracma,
+         rootSolve
 RoxygenNote: 6.1.1
 NeedsCompilation: no
 Suggests: 
