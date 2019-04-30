@@ -1,0 +1,52 @@
+---
+title: "Introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+library(simuCCP)
+```
+
+## Simulation 
+
+We can use `simuCCP::simuCCP` to simulate data with pre-defined C-index and time dependent AUC.  
+
+* `metrics` define different preditive metrics 
+* `family`  define the copula family
+
+### Single Marker
+
+For a Gaussian copula (`family = 1`), we can simulate a dataset for C-index = 0.7.   
+
+```{r}
+db1 <- simuCCP(N = 200, metric = "Cind", value = 0.7, family = 1)
+head(db1$data)
+```
+
+### Two Markers
+For two markers with Gaussian and Clayton copulas (`family = c(1,3)`), we can simulate data for C-index both equal to 0.7. The conditional copula between two markers is Gumbel (`fam2 = 4`) with parameter 1 (`par2 = 1`)
+
+```{r}
+db2 <- simuCCP(300, metric = "Cind", value = 0.7, family = c(1,3), fam2 = 4, par2 = 1)
+head(db2$data)
+```
+
+### Define parameters and predictive metrics
+
+There are a set of functions to calculate parameter to predictive metric and vice versa. 
+
+* C-index: `simuCCP::BiCopCind2Par` and `simuCCP::BiCopPar2Cind`  
+* AUC: `simuCCP::BiCopAUC2Par` and `simuCCP::BiCopPar2AUC`
+
+For example, we can find a clayton copula parameter for C-index equal to 0.75.
+
+```{r}
+simuCCP::BiCopCind2Par(family = 3, Cind = 0.75)
+```
+
+
+
