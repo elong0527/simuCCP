@@ -11,6 +11,6 @@ From an interactive R session:
 
 ```r
 library(devtools)
-install_github("elong0527/simuCPP")
+install_github("elong0527/simuCCP")
 library(simuCPP)
 ```
