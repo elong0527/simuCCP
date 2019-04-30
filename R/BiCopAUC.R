@@ -32,7 +32,7 @@ BiCopPar2AUC <- function(family, par, par2 = 0, c0, type = "cumulative"){
       h$hfunc2 * (1 - h$hfunc1)
     }
     eta <- 0
-    term5 <- integral(auc5, 0 + eta, 1 - eta, family = family, par = par, c0 = c0)
+    term5 <- pracma::integral(auc5, 0 + eta, 1 - eta, family = family, par = par, c0 = c0)
 
     auc <- term5 / (1 - c0)
 

@@ -8,7 +8,8 @@ Maintainer: elong0527<elong0527@gmail.com>
 Description: Simulate concordance probability, AUC and time-dependent AUC based on copula. 
 License: GPL-3
 LazyData: TRUE
-Depends: CDVine, 
+Depends: CDVine,
+         rootSolve,
          pracma
 RoxygenNote: 6.1.1
 NeedsCompilation: no
@@ -16,6 +17,7 @@ Suggests:
     knitr,
     rmarkdown,
     ROCR,
+    numDeriv,
     testthat
 VignetteBuilder: knitr
 Encoding: UTF-8

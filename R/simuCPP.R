@@ -1,6 +1,7 @@
 #' simuCCP package documentation
 #' @import CDVine
 #' @import rootSolve
+#' @importFrom pracma integral
 #'
 #' @docType package
 #' @name simuCCP

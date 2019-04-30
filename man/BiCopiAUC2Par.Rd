@@ -10,8 +10,6 @@ BiCopiAUC2Par(family, iAUC)
 \item{family}{copula family. check \code{BiCopPar2Tau} for detail.}
 
 \item{iAUC}{the integrated AUC value}
-
-\item{c0}{prevalence; cutoff point of latent uniform parameter}
 }
 \description{
 This function computes the parameter of a one parameter bivariate copula for a given value of AUC.

@@ -14,7 +14,6 @@
 #' @param type type is cumulative or incidence
 #' @examples
 #' #BiCopPar2iAUC( family = 3, par = 1)
-#' ## Note: the results are not stable
 BiCopPar2iAUC <- function(family, par, par2 = 0, show_AUC = T, c0_length = 50, weight = NULL, q_density = NULL, d_density = NULL, type = "cumulative"){
 
   if(show_AUC){
@@ -25,20 +24,20 @@ BiCopPar2iAUC <- function(family, par, par2 = 0, show_AUC = T, c0_length = 50, w
     AUC = NULL
   }
 
-  if( any(is.null(weight), is.null(density) ) ){
+  if( any(is.null(weight), is.null(q_density), is.null(d_density) ) ){
     # iAUC = mean(AUC)
     if(type == "cumulative"){
       foo <- function(x){
         sapply(x, BiCopPar2AUC, family = family, par = par, par2 = par2)
       }
-      iAUC =  pracma::integral(foo, xmin = 0, xmax = 1, vectorized = F)
+      iAUC =  pracma::integral(foo, xmin = 0, xmax = 1)
       # iAUC = 0
     }
     if(type == "incidence"){
       iAUC = BiCopPar2Cind(family, par)
     }
   }else{
-    print("double check how to use the weight in the paper")
+    print("The weight is not use properly")
   }
   list(AUC = AUC, c0 = c0,  iAUC = iAUC)
 }
@@ -50,7 +49,6 @@ BiCopPar2iAUC <- function(family, par, par2 = 0, show_AUC = T, c0_length = 50, w
 #' @export
 #' @param family copula family. check \code{BiCopPar2Tau} for detail.
 #' @param iAUC the integrated AUC value
-#' @param c0 prevalence; cutoff point of latent uniform parameter
 #' @examples
 #' # BiCopiAUC2Par(3, 0.75)
 BiCopiAUC2Par <- function(family, iAUC){

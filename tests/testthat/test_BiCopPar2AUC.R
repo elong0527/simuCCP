@@ -1,5 +1,6 @@
 context("BiCopPar2AUC")
 library(simuCCP)
+library(numDeriv)
 
 #' AUC value of a bivariate copula
 #'

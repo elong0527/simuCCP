@@ -32,5 +32,4 @@ This function computes the theoretical AUC value of a bivariate copula for given
 }
 \examples{
 #BiCopPar2iAUC( family = 3, par = 1)
-## Note: the results are not stable
 }
