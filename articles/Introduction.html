@@ -99,13 +99,13 @@
 <p>For a Gaussian copula (<code>family = 1</code>), we can simulate a dataset for C-index = 0.7.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">db1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/simuCCP.html">simuCCP</a></span>(<span class="dt">N =</span> <span class="dv">200</span>, <span class="dt">metric =</span> <span class="st">"Cind"</span>, <span class="dt">value =</span> <span class="fl">0.7</span>, <span class="dt">family =</span> <span class="dv">1</span>)</a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(db1<span class="op">$</span>data)</a></code></pre></div>
-<pre><code>##           [,1]      [,2]
-## [1,] 0.9617705 0.9306325
-## [2,] 0.7509062 0.9797219
-## [3,] 0.9759644 0.6146065
-## [4,] 0.2650476 0.2021585
-## [5,] 0.3675392 0.1164760
-## [6,] 0.1839845 0.4328847</code></pre>
+<pre><code>##            [,1]      [,2]
+## [1,] 0.05327962 0.1339474
+## [2,] 0.24875574 0.1197111
+## [3,] 0.67105548 0.1121155
+## [4,] 0.29895329 0.4795403
+## [5,] 0.26467834 0.6520569
+## [6,] 0.54178087 0.8926085</code></pre>
 </div>
 <div id="two-markers" class="section level3">
 <h3 class="hasAnchor">
@@ -114,12 +114,12 @@
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">db2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/simuCCP.html">simuCCP</a></span>(<span class="dv">300</span>, <span class="dt">metric =</span> <span class="st">"Cind"</span>, <span class="dt">value =</span> <span class="fl">0.7</span>, <span class="dt">family =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">1</span>,<span class="dv">3</span>), <span class="dt">fam2 =</span> <span class="dv">4</span>, <span class="dt">par2 =</span> <span class="dv">1</span>)</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(db2<span class="op">$</span>data)</a></code></pre></div>
 <pre><code>##            [,1]      [,2]      [,3]
-## [1,] 0.07671791 0.2542311 0.1376686
-## [2,] 0.98329057 0.9870102 0.7495610
-## [3,] 0.19625438 0.3126365 0.2200087
-## [4,] 0.92919709 0.8112809 0.9276522
-## [5,] 0.37276237 0.5190132 0.2746934
-## [6,] 0.55029786 0.7638290 0.7903521</code></pre>
+## [1,] 0.44307013 0.9771615 0.9301112
+## [2,] 0.56770645 0.8917181 0.6683660
+## [3,] 0.89580222 0.6653560 0.6979540
+## [4,] 0.09473053 0.2409726 0.1499177
+## [5,] 0.65410262 0.4316772 0.4524682
+## [6,] 0.62322077 0.6649854 0.8204349</code></pre>
 </div>
 <div id="define-parameters-and-predictive-metrics" class="section level3">
 <h3 class="hasAnchor">
