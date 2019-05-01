@@ -1,4 +1,4 @@
-[![Travis build status](https://travis-ci.org/elong0527/simuCPP.svg?branch=master)](https://travis-ci.org/elong0527/simuCPP.svg?branch=master)
+[![Build Status](https://travis-ci.org/elong0527/simuCCP.svg?branch=master)](https://travis-ci.org/elong0527/simuCCP)
 
 Simulating Time to Event Data with Pre-defined Predictive Metrics
 =========
