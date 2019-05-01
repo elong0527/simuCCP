@@ -7,7 +7,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r}
+```{r, message=FALSE}
 library(simuCCP)
 
 # C-index functon defined in evacure::cindex
@@ -75,7 +75,7 @@ round(simu_cindex_res, 2)
 
 ## Cumulative time dependent AUC
 
-```{r}
+```{r, message=FALSE}
 library(ROCR)
 set.seed(123)
 N_sim <- 10 # Number of Simulation
