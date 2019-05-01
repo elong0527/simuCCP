@@ -99,13 +99,13 @@
 <p>For a Gaussian copula (<code>family = 1</code>), we can simulate a dataset for C-index = 0.7.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">db1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/simuCCP.html">simuCCP</a></span>(<span class="dt">N =</span> <span class="dv">200</span>, <span class="dt">metric =</span> <span class="st">"Cind"</span>, <span class="dt">value =</span> <span class="fl">0.7</span>, <span class="dt">family =</span> <span class="dv">1</span>)</a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(db1<span class="op">$</span>data)</a></code></pre></div>
-<pre><code>##             [,1]       [,2]
-## [1,] 0.754069176 0.64341575
-## [2,] 0.818790694 0.61770806
-## [3,] 0.176646284 0.09273477
-## [4,] 0.510473867 0.53012673
-## [5,] 0.005772484 0.04900269
-## [6,] 0.274509159 0.38416278</code></pre>
+<pre><code>##           [,1]      [,2]
+## [1,] 0.8061311 0.8141588
+## [2,] 0.9110127 0.1489439
+## [3,] 0.5928371 0.9841616
+## [4,] 0.1971162 0.3060645
+## [5,] 0.8386136 0.8978946
+## [6,] 0.3287724 0.7239297</code></pre>
 </div>
 <div id="two-markers" class="section level3">
 <h3 class="hasAnchor">
@@ -113,13 +113,13 @@
 <p>For two markers with Gaussian and Clayton copulas (<code>family = c(1,3)</code>), we can simulate data for C-index both equal to 0.7. The conditional copula between two markers is Gumbel (<code>fam2 = 4</code>) with parameter 1 (<code>par2 = 1</code>)</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">db2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/simuCCP.html">simuCCP</a></span>(<span class="dv">300</span>, <span class="dt">metric =</span> <span class="st">"Cind"</span>, <span class="dt">value =</span> <span class="fl">0.7</span>, <span class="dt">family =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">1</span>,<span class="dv">3</span>), <span class="dt">fam2 =</span> <span class="dv">4</span>, <span class="dt">par2 =</span> <span class="dv">1</span>)</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(db2<span class="op">$</span>data)</a></code></pre></div>
-<pre><code>##           [,1]       [,2]      [,3]
-## [1,] 0.3478310 0.07068302 0.5403876
-## [2,] 0.8197382 0.86039902 0.3133826
-## [3,] 0.9778006 0.74716727 0.5938983
-## [4,] 0.1680519 0.57583467 0.4007282
-## [5,] 0.7313490 0.56007169 0.8384777
-## [6,] 0.9295173 0.46172258 0.8769111</code></pre>
+<pre><code>##            [,1]       [,2]       [,3]
+## [1,] 0.28859154 0.06614552 0.78745812
+## [2,] 0.71452539 0.56749199 0.80700698
+## [3,] 0.05391421 0.39002228 0.08000236
+## [4,] 0.14717926 0.75206280 0.07937104
+## [5,] 0.70250540 0.80435288 0.50847888
+## [6,] 0.81330228 0.56284260 0.79637799</code></pre>
 </div>
 <div id="define-parameters-and-predictive-metrics" class="section level3">
 <h3 class="hasAnchor">
@@ -152,7 +152,7 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by  elong0527.</p>
+  <p>Developed by Yilong Zhang.</p>
 </div>
 
 <div class="pkgdown">
