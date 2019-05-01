@@ -4,7 +4,7 @@ Title: Simulate concordance probability, AUC and time-dependent AUC
         based on copula
 Version: 0.1
 Author: Yilong Zhang
-Maintainer: elong0527<elong0527@gmail.com>
+Maintainer: Yilong Zhang<elong0527@gmail.com>
 Description: Simulate concordance probability, AUC and time-dependent AUC based on copula. 
 License: GPL-3
 LazyData: TRUE
