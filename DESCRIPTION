@@ -8,9 +8,10 @@ Maintainer: Yilong Zhang<elong0527@gmail.com>
 Description: Simulate concordance probability, AUC and time-dependent AUC based on copula. 
 License: GPL-3
 LazyData: TRUE
-Depends: CDVine,
-         rootSolve,
-         pracma
+Imports:
+    CDVine,
+    rootSolve,
+    pracma
 RoxygenNote: 7.1.1
 NeedsCompilation: no
 Suggests: 

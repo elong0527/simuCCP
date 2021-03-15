@@ -18,17 +18,17 @@ BiCopPar2AUC <- function(family, par, par2 = 0, c0, type = "cumulative"){
   if(type == "cumulative"){
     auc1 <- function(u, family, par, par2 = 0, c0){
       v0 <- rep(c0, length(u))
-      BiCopCDF(u, v0, family = family, par = par, par2 = par2)
+      CDVine::BiCopCDF(u, v0, family = family, par = par, par2 = par2)
     }
 
-    term1 <- integral(auc1, 0, 1, family = family, par = par, par2 = par2, c0 = c0)
+    term1 <- pracma::integral(auc1, 0, 1, family = family, par = par, par2 = par2, c0 = c0)
     auc <- (term1 - c0^2/2)/ c0 / (1 - c0)
   }
 
   if(type == "incidence"){
     auc5 <- function(u, family, par, par2 = 0, c0){
       v0 <- rep(c0, length(u))
-      h <- BiCopHfunc(u, v0, family = family, par = par, par2 = par2)
+      h <- CDVine::BiCopHfunc(u, v0, family = family, par = par, par2 = par2)
       h$hfunc2 * (1 - h$hfunc1)
     }
     eta <- 0
