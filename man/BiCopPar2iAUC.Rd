@@ -4,9 +4,17 @@
 \alias{BiCopPar2iAUC}
 \title{iAUC value of a bivariate copula}
 \usage{
-BiCopPar2iAUC(family, par, par2 = 0, show_AUC = T, c0_length = 50,
-  weight = NULL, q_density = NULL, d_density = NULL,
-  type = "cumulative")
+BiCopPar2iAUC(
+  family,
+  par,
+  par2 = 0,
+  show_AUC = T,
+  c0_length = 50,
+  weight = NULL,
+  q_density = NULL,
+  d_density = NULL,
+  type = "cumulative"
+)
 }
 \arguments{
 \item{family}{copula family. check \code{BiCopPar2Tau} for detail.}

@@ -11,7 +11,7 @@ LazyData: TRUE
 Depends: CDVine,
          rootSolve,
          pracma
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
 NeedsCompilation: no
 Suggests: 
     knitr,
