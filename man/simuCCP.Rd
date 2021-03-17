@@ -3,11 +3,17 @@
 \docType{package}
 \name{simuCCP}
 \alias{simuCCP}
-\alias{simuCCP-package}
 \title{simuCCP package documentation}
 \usage{
-simuCCP(N, metric = "Cind", value = 0.7, family = c(1, 3, 4),
-  c0 = 0.5, fam2 = NULL, par2 = NULL)
+simuCCP(
+  N,
+  metric = "Cind",
+  value = 0.7,
+  family = c(1, 3, 4),
+  c0 = 0.5,
+  fam2 = NULL,
+  par2 = NULL
+)
 }
 \arguments{
 \item{N}{sample size}

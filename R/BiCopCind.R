@@ -9,7 +9,7 @@
 #' @examples
 #' # BiCopPar2AUC(3, 1, c0 = 0.5)
 BiCopPar2Cind <- function(family, par, par2 = 0){
-  tau <- BiCopPar2Tau(family, par, par2)
+  tau <- CDVine::BiCopPar2Tau(family, par, par2)
   Cind <- (tau + 1)/2
   Cind
 }
@@ -25,7 +25,7 @@ BiCopPar2Cind <- function(family, par, par2 = 0){
 #' # BiCopCstat2Par(3, 0.8)
 BiCopCind2Par <- function(family, Cind){
   tau <- 2 * Cind - 1
-  BiCopTau2Par(family, tau)
+  CDVine::BiCopTau2Par(family, tau)
 }
 
 
