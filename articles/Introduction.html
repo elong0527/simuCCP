@@ -103,12 +103,12 @@
 <code class="sourceCode R"><span class="va">db1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/simuCCP.html">simuCCP</a></span><span class="op">(</span>N <span class="op">=</span> <span class="fl">200</span>, metric <span class="op">=</span> <span class="st">"Cind"</span>, value <span class="op">=</span> <span class="fl">0.7</span>, family <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">db1</span><span class="op">$</span><span class="va">data</span><span class="op">)</span></code></pre></div>
 <pre><code>##           [,1]      [,2]
-## [1,] 0.4572668 0.5837854
-## [2,] 0.6275450 0.5718662
-## [3,] 0.2598960 0.8824149
-## [4,] 0.9159744 0.4954127
-## [5,] 0.6625675 0.7421771
-## [6,] 0.6016245 0.2044955</code></pre>
+## [1,] 0.5165794 0.9909801
+## [2,] 0.2971304 0.3797835
+## [3,] 0.1359071 0.3385832
+## [4,] 0.7788046 0.1452870
+## [5,] 0.5848622 0.6870773
+## [6,] 0.9230353 0.6509479</code></pre>
 </div>
 <div id="two-markers" class="section level3">
 <h3 class="hasAnchor">
@@ -117,13 +117,13 @@
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">db2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/simuCCP.html">simuCCP</a></span><span class="op">(</span><span class="fl">300</span>, metric <span class="op">=</span> <span class="st">"Cind"</span>, value <span class="op">=</span> <span class="fl">0.7</span>, family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">3</span><span class="op">)</span>, fam2 <span class="op">=</span> <span class="fl">4</span>, par2 <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">db2</span><span class="op">$</span><span class="va">data</span><span class="op">)</span></code></pre></div>
-<pre><code>##            [,1]      [,2]      [,3]
-## [1,] 0.14165851 0.1353075 0.3682186
-## [2,] 0.22565727 0.8833702 0.9257574
-## [3,] 0.62079563 0.7997895 0.4689124
-## [4,] 0.66739047 0.3015319 0.6254231
-## [5,] 0.09824512 0.1091130 0.1250554
-## [6,] 0.11079555 0.4892216 0.4024076</code></pre>
+<pre><code>##             [,1]      [,2]       [,3]
+## [1,] 0.009740726 0.1319879 0.06646766
+## [2,] 0.478556302 0.5877110 0.02350019
+## [3,] 0.640261967 0.9134047 0.67733882
+## [4,] 0.848685465 0.7842017 0.76892256
+## [5,] 0.337610438 0.5056075 0.73909891
+## [6,] 0.214930660 0.2534198 0.41402175</code></pre>
 </div>
 <div id="define-parameters-and-predictive-metrics" class="section level3">
 <h3 class="hasAnchor">
