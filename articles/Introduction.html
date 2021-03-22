@@ -102,13 +102,13 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">db1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/simuCCP.html">simuCCP</a></span><span class="op">(</span>N <span class="op">=</span> <span class="fl">200</span>, metric <span class="op">=</span> <span class="st">"Cind"</span>, value <span class="op">=</span> <span class="fl">0.7</span>, family <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">db1</span><span class="op">$</span><span class="va">data</span><span class="op">)</span></code></pre></div>
-<pre><code>##           [,1]      [,2]
-## [1,] 0.5165794 0.9909801
-## [2,] 0.2971304 0.3797835
-## [3,] 0.1359071 0.3385832
-## [4,] 0.7788046 0.1452870
-## [5,] 0.5848622 0.6870773
-## [6,] 0.9230353 0.6509479</code></pre>
+<pre><code>##            [,1]       [,2]
+## [1,] 0.03493264 0.22014414
+## [2,] 0.57806616 0.60794124
+## [3,] 0.47493497 0.86194221
+## [4,] 0.17915798 0.51604281
+## [5,] 0.36597751 0.07054376
+## [6,] 0.28685512 0.37466524</code></pre>
 </div>
 <div id="two-markers" class="section level3">
 <h3 class="hasAnchor">
@@ -117,13 +117,13 @@
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">db2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/simuCCP.html">simuCCP</a></span><span class="op">(</span><span class="fl">300</span>, metric <span class="op">=</span> <span class="st">"Cind"</span>, value <span class="op">=</span> <span class="fl">0.7</span>, family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">3</span><span class="op">)</span>, fam2 <span class="op">=</span> <span class="fl">4</span>, par2 <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">db2</span><span class="op">$</span><span class="va">data</span><span class="op">)</span></code></pre></div>
-<pre><code>##             [,1]      [,2]       [,3]
-## [1,] 0.009740726 0.1319879 0.06646766
-## [2,] 0.478556302 0.5877110 0.02350019
-## [3,] 0.640261967 0.9134047 0.67733882
-## [4,] 0.848685465 0.7842017 0.76892256
-## [5,] 0.337610438 0.5056075 0.73909891
-## [6,] 0.214930660 0.2534198 0.41402175</code></pre>
+<pre><code>##           [,1]       [,2]       [,3]
+## [1,] 0.2559883 0.23424499 0.91093173
+## [2,] 0.8103560 0.74759806 0.45673448
+## [3,] 0.6219023 0.33447981 0.59049694
+## [4,] 0.1952122 0.17839264 0.33823210
+## [5,] 0.7115386 0.04398315 0.07219314
+## [6,] 0.5063336 0.37638726 0.96537748</code></pre>
 </div>
 <div id="define-parameters-and-predictive-metrics" class="section level3">
 <h3 class="hasAnchor">
