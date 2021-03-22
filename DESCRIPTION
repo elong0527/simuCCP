@@ -13,7 +13,6 @@ NeedsCompilation: no
 Encoding: UTF-8
 VignetteBuilder: knitr
 Imports:
-    CDVine,
     rootSolve,
     pracma
 Suggests: 
@@ -22,5 +21,3 @@ Suggests:
     ROCR,
     numDeriv,
     testthat
-Remotes:
-    github::cran/CDVine

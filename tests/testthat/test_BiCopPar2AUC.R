@@ -2,7 +2,6 @@ context("BiCopPar2AUC")
 library(simuCCP)
 library(numDeriv)
 library(pracma)
-library(CDVine)
 
 #' AUC value of a bivariate copula
 #'

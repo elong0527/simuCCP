@@ -1,6 +1,5 @@
 #' simuCCP package documentation
 #'
-#' @importFrom CDVine BiCopCDF BiCopHfunc BiCopPar2Tau CDVineSim
 #' @importFrom rootSolve multiroot
 #' @importFrom pracma integral
 #'
@@ -61,7 +60,7 @@ simuCCP <- function(N, metric = "Cind", value = 0.7, family = c(1,3,4), c0 = 0.5
     fam1 <- c(family, fam2)
     par1 <- c(par1, par2)
   }
-  U1 = CDVine::CDVineSim(N, fam1, par1, type = 1) # C-Vine
+  U1 = CDVineSim(N, fam1, par1, type = 1) # C-Vine
 
   # if(metric == "AUC") U1[,1] <- U1[,1] > c0
   list( data = U1, family = fam1, parameter = par1)
@@ -81,7 +80,7 @@ simuCCP <- function(N, metric = "Cind", value = 0.7, family = c(1,3,4), c0 = 0.5
 simuCCP_para <- function(N, metric, family, par, c0 = 0.5){
   if(! metric %in% c("Cind","iAUC","AUC"))
     stop("We only support C-index, iAUC and AUC")
-  U1 = CDVine::CDVineSim(N, family, par, type = 1) # C-Vine
+  U1 = CDVineSim(N, family, par, type = 1) # C-Vine
   if(metric == "AUC") U1[,1] <- U1[,1] > c0
 
   U1
