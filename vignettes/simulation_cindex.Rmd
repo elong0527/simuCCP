@@ -75,7 +75,7 @@ round(simu_cindex_res, 2)
 
 ## Cumulative time dependent AUC
 
-```{r, message=FALSE}
+```{r, eval = FALSE, message=FALSE}
 library(ROCR)
 set.seed(123)
 N_sim <- 10 # Number of Simulation

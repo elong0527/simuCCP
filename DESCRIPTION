@@ -1,6 +1,6 @@
 Package: simuCCP
 Type: Package
-Title: Simulate concordance probability, AUC and time-dependent AUC
+Title: Simulate Concordance Probability, AUC and Time-dependent AUC
         based on copula
 Version: 0.1
 Author: Yilong Zhang
