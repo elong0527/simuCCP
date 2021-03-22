@@ -2,14 +2,14 @@
 #define VINE_H
 
 /*
-** vine.c - C code of the package CDRVine    
-** 
-** with contributions from Carlos Almeida, Aleksey Min, 
+** vine.c - C code of the package CDRVine
+**
+** with contributions from Carlos Almeida, Aleksey Min,
 ** Ulf Schepsmeier, Jakob Stoeber and Eike Brechmann
-** 
+**
 ** A first version was based on code
 ** from Daniel Berg <daniel at danielberg.no>
-** provided by personal communication. 
+** provided by personal communication.
 **
 */
 
@@ -29,7 +29,7 @@
 #include <float.h>
 #include <setjmp.h>
 #include <R.h>
-#include <Rdefines.h> 
+#include <Rdefines.h>
 #include <Rmath.h>
 #include <Rinternals.h>
 #include "vine.h"
@@ -88,4 +88,9 @@ void SimulateVine(int* T, int* d, int* family, int* maxmat, int* matrix, int* co
 
 void condsim(int* n, int* d, int* d1, double* u1, int* family, double* par, double* nu, double* out);
 
+void R_init_simuCCP(DllInfo *dll)
+{
+  R_registerRoutines(dll, CEntries, NULL, NULL, NULL);
+  R_useDynamicSymbols(dll, FALSE);
+}
 #endif
