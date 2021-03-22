@@ -1,29 +1,15 @@
 #' Function from CDVine
 #' https://github.com/cran/CDVine
 #' @noRd
-#########################################
-# BiCopHfunc  			#
-#					#
-# Input:				#
-# u1,u2		copula data		#
-# family	copula family		#
-# par		copula parameter	#
-# par2		copula parameter 2	#
-#					#
-# Output:				#
-# hfunc1	h-function h(u1,u2)	#
-# hfunc2	h-function h(u2,u1)	#
-#########################################
-
-BiCopHfunc <- function(u1, u2, family, par, par2 = 0) {
+BiCopPDF <- function(u1, u2, family, par, par2 = 0) {
   if (is.null(u1) == TRUE || is.null(u2) == TRUE)
     stop("u1 and/or u2 are not set or have length zero.")
+  if (length(u1) != length(u2))
+    stop("Lengths of 'u1' and 'u2' do not match.")
   if (any(u1 > 1) || any(u1 < 0))
     stop("Data has be in the interval [0,1].")
   if (any(u2 > 1) || any(u2 < 0))
     stop("Data has be in the interval [0,1].")
-  if (length(u1) != length(u2))
-    stop("Lengths of 'u1' and 'u2' do not match.")
   if (!(family %in% c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 16, 17, 18, 19, 20, 23, 24, 26, 27, 28,
                       29, 30, 33, 34, 36, 37, 38, 39, 40)))
     stop("Copula family not implemented.")
@@ -83,15 +69,8 @@ BiCopHfunc <- function(u1, u2, family, par, par2 = 0) {
   if ((family == 30 || family == 40) && (par2 >= 0 || par2 < (-1)))
     stop("The second parameter of the rotated BB8 copula has to be in the interval [-1,0).")
 
-  n <- length(u1)
+  coplik <- .C("LL_mod_seperate", as.integer(family), as.integer(length(u1)), as.double(u1), as.double(u2),
+               as.double(par), as.double(par2), as.double(rep(0, length(u1))), PACKAGE = "simuCCP")[[7]]
 
-  hfunc1 <- .C("Hfunc1", as.integer(family), as.integer(n), as.double(u2), as.double(u1), as.double(par),
-               as.double(par2), as.double(rep(0, n)), PACKAGE = "simuCCP")[[7]]
-
-  hfunc2 <- .C("Hfunc2", as.integer(family), as.integer(n), as.double(u1), as.double(u2), as.double(par),
-               as.double(par2), as.double(rep(0, n)), PACKAGE = "simuCCP")[[7]]
-
-
-  hfunc <- list(hfunc1 = hfunc1, hfunc2 = hfunc2)
-  return(hfunc)
+  return(exp(coplik))
 }

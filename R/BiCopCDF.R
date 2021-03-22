@@ -1,5 +1,6 @@
 #' Function from CDVine
 #' https://github.com/cran/CDVine
+#' @noRd
 BiCopCDF <- function(u1, u2, family, par, par2 = 0) {
   if (is.null(u1) == TRUE || is.null(u2) == TRUE)
     stop("u1 and/or u2 are not set or have length zero.")

@@ -9,7 +9,7 @@ vignette: >
 
 ```{r, message=FALSE}
 library(simuCCP)
-
+library(mvtnorm)
 # C-index functon defined in evacure::cindex
 cindex <- function (risk, pi, time, delta, tau = NULL){
     risk <- as.numeric(risk)

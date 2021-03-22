@@ -1,5 +1,6 @@
 #' Function from CDVine
 #' https://github.com/cran/CDVine
+#' @noRd
 BiCopTau2Par <- function(family, tau) {
 
   if (!(family %in% c(0, 1, 3, 4, 5, 6, 13, 14, 16, 23, 24, 26, 33, 34, 36)))

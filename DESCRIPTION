@@ -14,7 +14,9 @@ Encoding: UTF-8
 VignetteBuilder: knitr
 Imports:
     rootSolve,
-    pracma
+    pracma,
+    mvtnorm,
+    stats
 Suggests: 
     knitr,
     rmarkdown,

@@ -2,8 +2,11 @@
 #'
 #' @importFrom rootSolve multiroot
 #' @importFrom pracma integral
+#' @importFrom mvtnorm pmvnorm pmvt
+#' @importFrom stats qnorm qt integrate uniroot
 #'
 #' @docType package
+#' @useDynLib simuCCP
 #' @name simuCCP
 NULL
 

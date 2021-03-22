@@ -1,6 +1,6 @@
 #' Function from CDVine
 #' https://github.com/cran/CDVine
-#'
+#' @noRd
 CDVineSim <- function(N, family, par, par2 = rep(0, length(family)), type) {
   ## #############################################################################
   ##  Function that simulates copulae, gaussian, student's t, clayton or gumbel ##
