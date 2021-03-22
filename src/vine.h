@@ -88,20 +88,4 @@ void SimulateVine(int* T, int* d, int* family, int* maxmat, int* matrix, int* co
 
 void condsim(int* n, int* d, int* d1, double* u1, int* family, double* par, double* nu, double* out);
 
-static const R_CMethodDef CEntries[] = {
-  {"archCDF",         (DL_FUNC) &archCDF,         6},
-  {"Hfunc1",          (DL_FUNC) &Hfunc1,          7},
-  {"Hfunc2",          (DL_FUNC) &Hfunc2,          7},
-  {"LL_mod_seperate", (DL_FUNC) &LL_mod_seperate, 7},
-  {"pcc",             (DL_FUNC) &pcc,             7},
-  {"SimulateVine",    (DL_FUNC) &SimulateVine,    9},
-  {NULL, NULL, 0}
-};
-
-void R_init_simuCCP(DllInfo *dll)
-{
-  R_registerRoutines(dll, CEntries, NULL, NULL, NULL);
-  R_useDynamicSymbols(dll, FALSE);
-}
-
 #endif
