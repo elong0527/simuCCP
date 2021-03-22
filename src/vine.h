@@ -88,9 +88,4 @@ void SimulateVine(int* T, int* d, int* family, int* maxmat, int* matrix, int* co
 
 void condsim(int* n, int* d, int* d1, double* u1, int* family, double* par, double* nu, double* out);
 
-void R_init_simuCCP(DllInfo *dll)
-{
-  R_registerRoutines(dll, CEntries, NULL, NULL, NULL);
-  R_useDynamicSymbols(dll, FALSE);
-}
 #endif
