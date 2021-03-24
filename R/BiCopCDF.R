@@ -13,9 +13,9 @@ BiCopCDF <- function(u1, u2, family, par, par2 = 0) {
   if (!(family %in% c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 16, 17, 18, 19, 20, 23, 24, 26, 27, 28,
                       29, 30, 33, 34, 36, 37, 38, 39, 40)))
     stop("Copula family not implemented.")
-  if (c(2, 7, 8, 9, 10, 17, 18, 19, 20, 27, 28, 29, 30, 37, 38, 39, 40) %in% family && par2 == 0)
+  if (any(c(2, 7, 8, 9, 10, 17, 18, 19, 20, 27, 28, 29, 30, 37, 38, 39, 40) %in% family) && par2 == 0)
     stop("For t-, BB1, BB6, BB7 and BB8 copulas, 'par2' must be set.")
-  if (c(1, 3, 4, 5, 6, 13, 14, 16, 23, 24, 26, 33, 34, 36) %in% family && length(par) < 1)
+  if (any(c(1, 3, 4, 5, 6, 13, 14, 16, 23, 24, 26, 33, 34, 36) %in% family) && length(par) < 1)
     stop("'par' not set.")
 
   if ((family == 1 || family == 2) && abs(par[1]) >= 1)

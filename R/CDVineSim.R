@@ -30,8 +30,7 @@ CDVineSim <- function(N, family, par, par2 = rep(0, length(family)), type) {
 
     if (length(par) < dd)
       stop("Length of 'par' has to be d*(d-1)/2.")
-    if (c(2, 7, 8, 9, 10, 17, 18, 19, 20, 27, 28, 29, 30, 37, 38, 39, 40) %in% family && length(par2) !=
-        dd)
+    if (any(c(2, 7, 8, 9, 10, 17, 18, 19, 20, 27, 28, 29, 30, 37, 38, 39, 40) %in% family) && length(par2) != dd)
       stop("Length of 'par2' has to be d*(d-1)/2 if t, BB1, BB6, BB7 or BB8 copulas are used.")
     if (length(family) != dd)
       stop("Length of 'family' has to be d*(d-1)/2.")
