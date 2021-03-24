@@ -1,8 +1,8 @@
 # Simulating Time to Event Data with Pre-defined Predictive Metrics
 
-[![Build Status](https://travis-ci.org/elong0527/simuCCP.svg?branch=master)](https://travis-ci.org/elong0527/simuCCP)
+[![R build status](https://github.com/elong0527/simuCCP/workflows/R-CMD-check/badge.svg)](https://github.com/elong0527/simuCCP/actions)
 
-An R package for simulating concordance probability, AUC and time-dependent AUC by using copula. 
+An R package for simulating concordance probability, AUC and time-dependent AUC using copula. 
 
 ## Installation
 
